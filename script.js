@@ -1,5 +1,4 @@
-var scriptURL = "https://script.google.com/macros/s/AKfycbzWYAAR3CBhyAS1PDf7LThjNPYfwHrLjYTZWU05Vqz10LQAB2MpDUbNeiR0NDkX5D4kLw/exec";
-
+var scriptURL = "https://script.google.com/macros/s/AKfycbznGlHwAWgtk7kmrx26AvYTn1-o667zmMSknKmpQ6ll0wq0LZAPXeywki9UrShQMXk/exec";
 /**
  * Initializations
  */
@@ -33,7 +32,7 @@ function fetchQuizQuestions(){
     /**
      * TODO : remove this script
      */
-    let demo = scriptURL+'?callback=showQuestion';
+    let demo = scriptURL+'?action=quiz&callback=showQuestion';
 
     quiz = JSON.parse(quizeStore.getItem('quiz'));
 

@@ -1,3 +1,4 @@
+var scriptURL = "https://script.google.com/macros/s/AKfycbznGlHwAWgtk7kmrx26AvYTn1-o667zmMSknKmpQ6ll0wq0LZAPXeywki9UrShQMXk/exec";
 const resultAnalysis = document.getElementById('result-analysis')
 const retakeQuizContainer = document.getElementById('retake-quiz-container')
 const loadingContainer = document.getElementById('loading-container')
@@ -18,8 +19,6 @@ function resultInit() {
         loadingContainer.classList.add('d-none');
         retakeQuizContainer.classList.remove('d-none');
     }
-
-    resetQuizQuestion();
 }
 
 function generateResultMarkup(_questionsAnswers, _localAnswer){

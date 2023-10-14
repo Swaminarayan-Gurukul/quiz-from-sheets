@@ -7,8 +7,7 @@ var quizeStore = localStorage;
 
 var handleRequest = function(user, type){
     var ajaxRequest = function(user){
-        var scriptURL = "https://script.google.com/macros/s/AKfycbzWYAAR3CBhyAS1PDf7LThjNPYfwHrLjYTZWU05Vqz10LQAB2MpDUbNeiR0NDkX5D4kLw/exec";
-        // user = { data : user };
+        var scriptURL = "https://script.google.com/macros/s/AKfycbznGlHwAWgtk7kmrx26AvYTn1-o667zmMSknKmpQ6ll0wq0LZAPXeywki9UrShQMXk/exec";        // user = { data : user };
         $.ajax({
             type: "POST",
             url: scriptURL,
@@ -44,9 +43,14 @@ var handleRequest = function(user, type){
                         (quizeStore.getItem('login') == 'undefined') ? quizeStore.setItem('login', '0') : '';
                         (quizeStore.getItem('token') == 'undefined') ? quizeStore.setItem('token', '') : '';
                         console.log(data[type]);
-                        if(data[type]){
+                        if(data.signup){
+                            quizeStore.setItem('login', '1');
                             data.token.length && quizeStore.setItem('token', data.token);
-                            (quizeStore.getItem('login') == '0') && (window.location.href = '../');
+                            var sessionTimeout = 1; //hours
+                            var loginDuration = new Date();
+                            loginDuration.setTime(loginDuration.getTime()+(sessionTimeout*60*60*1000));
+                            document.cookie = "CrewCentreSession=Valid; "+loginDuration.toGMTString()+"; path=/";
+                            window.location.href = "../";
                         }
                         alert(data.result);
                         return data;
@@ -74,8 +78,8 @@ $(document).ready(function(){
         e.preventDefault();
         let user = {
             name: 'login',
-            email: $('.login-form #email').val(),
-            id: $('.login-form #password').val(),
+            name: $('.login-form #email').val(),
+            phone: $('.login-form #password').val(),
             action: 'login',
         } 
         handleRequest(user, 'login');
@@ -85,8 +89,7 @@ $(document).ready(function(){
         e.preventDefault();
         let user = {
             name: $('.signup-form #name').val(),
-            email: $('.signup-form #email').val(),
-            id: $('.signup-form #password').val(),
+            phone: $('.signup-form #phone').val(),
             action: "signup",
         } 
         console.log(user);
