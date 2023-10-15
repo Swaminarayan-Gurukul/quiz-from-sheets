@@ -1,4 +1,4 @@
-var scriptURL = "https://script.google.com/macros/s/AKfycbznGlHwAWgtk7kmrx26AvYTn1-o667zmMSknKmpQ6ll0wq0LZAPXeywki9UrShQMXk/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbyASrl8ZVHWLyCiNL59T6LNDpi3_FKap22tZuIH0E485kMyKaGd07tMLRfjbEHELuKS/exec";
 /**
  * Initializations
  */
@@ -34,20 +34,13 @@ function fetchQuizQuestions(){
      */
     let demo = scriptURL+'?action=quiz&callback=showQuestion';
 
-    quiz = JSON.parse(quizeStore.getItem('quiz'));
-
-    if(quiz) {
-        showQuestion(quiz);
-        return;
-    }
-
     var request = jQuery.ajax({
         crossDomain: true,
         url: demo,
         method: "GET",
-        dataType: "jsonp",
-        success : function( e ){
-            //console.log(e);
+        dataType: "text",
+        success : function( data ){
+            showQuestion(JSON.parse(data))
         },
         error: function( xhr,e ){
             console.log(e);
