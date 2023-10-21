@@ -1,6 +1,9 @@
 # quiz-from-sheets
 we are developing the quiz which fetches the questions from the google sheets and it will store the answers of users in the sheet
 
+To View Quiz: https://swaminarayan-gurukul.github.io/quiz-from-sheets
+To View Final Result: https://swaminarayan-gurukul.github.io/quiz-from-sheets/final-result
+
 ## Features:
 
 1. Generates quiz directly from the Google shhets.

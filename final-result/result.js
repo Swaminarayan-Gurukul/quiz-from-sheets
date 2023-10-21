@@ -13,7 +13,8 @@ function displayAllResults(results){
     resultsJson.sort((a, b) => b[2] - a[2]);
 
     leaderResults = resultsJson.slice(0,3);
-    runnersUpResults = resultsJson.slice(3)
+    // runnersUpResults = resultsJson.slice(3);
+    runnersUpResults = resultsJson;
     displayLeaderBoard(leaderResults);
     displayRunnerUps(runnersUpResults);
     // Print the sorted array
