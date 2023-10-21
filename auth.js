@@ -7,7 +7,7 @@ var quizeStore = localStorage;
 
 var handleRequest = function(user, type){
     var ajaxRequest = function(user){
-        var scriptURL = "https://script.google.com/macros/s/AKfycbyASrl8ZVHWLyCiNL59T6LNDpi3_FKap22tZuIH0E485kMyKaGd07tMLRfjbEHELuKS/exec";        // user = { data : user };
+        var scriptURL = "https://script.google.com/macros/s/AKfycbzFXMdEMIwNM0iSUTFH1gicogVPEvTNMiozKzlCV87J0j4FUCi6QiFtY4VDqxr5SXvi/exec";        // user = { data : user };
         $.ajax({
             type: "POST",
             url: scriptURL,
@@ -52,7 +52,6 @@ var handleRequest = function(user, type){
                             document.cookie = "CrewCentreSession=Valid; "+loginDuration.toGMTString()+"; path=/";
                             window.location.href = "../";
                         }
-                        alert(data.result);
                         return data;
         
                         break;
@@ -93,6 +92,10 @@ $(document).ready(function(){
             action: "signup",
         } 
         console.log(user);
+        let formSubmit = this.querySelector('.form-submit');
+        formSubmit.innerText = "Working...";
+        formSubmit.setAttribute("disabled", "true")
+
         handleRequest(user, 'signup');
     });
 

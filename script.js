@@ -1,4 +1,4 @@
-var scriptURL = "https://script.google.com/macros/s/AKfycbyASrl8ZVHWLyCiNL59T6LNDpi3_FKap22tZuIH0E485kMyKaGd07tMLRfjbEHELuKS/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbzFXMdEMIwNM0iSUTFH1gicogVPEvTNMiozKzlCV87J0j4FUCi6QiFtY4VDqxr5SXvi/exec";
 /**
  * Initializations
  */
@@ -155,13 +155,14 @@ function sendResultToGoogleSheet(formData) {
                 // 'Content-type': 'application/json',
             },
             beforeSuccess: function(){
-                setTimeout(function(){ alert("Hello"); }, 5000);
+                
             },
             success: function (data)
             {
-              
-                        console.log('Case default')
-                console.log(data);
+                dataJson = JSON.parse(data);
+                $('#commonModal .modal-body').text(dataJson.result)
+                $('#commonModal').modal('show')
+
             }
         });
     } 

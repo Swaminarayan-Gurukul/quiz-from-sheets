@@ -1,94 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script data-ad-client="ca-pub-5659963957549282" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script data-ad-client="ca-pub-5659963957549282" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script type="application/javascript">
-	var doNotTrack = false;
-	if (!doNotTrack) {
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-165932508-1', 'auto');
+		var doNotTrack = false;
+		if (!doNotTrack) {
+			(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date(); a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-165932508-1', 'auto');
 
-		ga('send', 'pageview');
-	}
+			ga('send', 'pageview');
+		}
 	</script>
 	<title>Satsang Sabha Quiz</title>
 	<link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+		integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Quiz from Sheets</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./result/">
-				  <i class="fa fa-list-alt"></i> Result
-				</a>
-			</li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://github.com/vanpariyar/quiz-from-sheets">
-                  <i class="fa fa-book"></i>Features
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="logout/">
-                <i class="fa fa-user"></i> Logout
-              </a>
-            </li>
-          </ul>
-          <span class="navbar-text">
-            <i class="fa fa-user"></i> Hello User
-          </span>
-        </div>
+		<a class="navbar-brand" href="#">Quiz from Sheets</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<!-- <li class="nav-item">
+					<a class="nav-link" href="./result/">
+						<i class="fa fa-list-alt"></i> Result
+					</a>
+				</li> -->
+				<li class="nav-item">
+					<a class="nav-link" target="_blank" href="https://github.com/vanpariyar/quiz-from-sheets">
+						<i class="fa fa-book"></i>Features
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="logout/">
+						<i class="fa fa-user"></i> Logout
+					</a>
+				</li>
+			</ul>
+			<span class="navbar-text">
+				<i class="fa fa-user"></i> Hello User
+			</span>
+		</div>
 	</nav>
 	<div class="container">
 		<!-- <div class="title text-center">
 			<h1>Hello This is the satsag Quiz</h1>
 		</div> -->
 		<div id="quiz-container" class="text-center card p-1 pb-3 pt-3 shadow mt-5 d-none">
-			<figure class="w-25 img-thumbnail mx-auto round shadow" >
-				<img src="https://lh3.googleusercontent.com/twN6CGQLGe7l8BPa_4-1qkZ7FWL5CRUmQVHLymmNIxqNy8pxqeCeU8HJkLSWPEO7ZGbF8Cs3O5G-0kSaLNFXp555H0qdT4vYcqYflNzL0ZCNzcm35ktQkoKEAxSakQ_IS1-ynQuakqmHtTpYE-4cpPUFXccHmXKnF3K3bw1PQGPxU8nlF-DyxznbuV2G_NqGq8L8l-MPlwA1TUOghEECUAS9Qp3mAWEeqmpQ5J15cHiedQRYlQrS4hR-Z5lebT_Ofj3Ji6-_FWHK-04rpUSu8bB9ekTuzpX3vIRCzEfe37enk4rwbSb-hAEc9ymsmxG5PkGQwY-KJnnsRgRW-y9hLZCKLOxcwob_LGPZOwX_6oTUKnjqOX32xRNjkW5B4HKp8TlFtRdK6lFQJBr4LyHCFquZ6LVu-EsMwNGKnO7Bd4elTOW9ZAZfbfBCoSb9mK8nk0RYrzO3dQ61N_iDiN3JHGl5f902k2EhD5so2PvwqhnQ_MHeR9DGswNTWJI-ZYKzHWq9TqnHvjTQJ1D5cDb-zJmDtqfMKGMjuEeoH09wHX1nRzTGtnOE1DBzIgtL1_Fxj4cE_kbCwLrhSecKJP7qu_8WwaBVTrsf4mazYNGF6PaGds8NrpHoNMJG9eF2o0FP_efA71VMWNdHSiOu-ZwEdXaF2pwh3woUwGkCrZcdlP_4mtAIlEfA9Y8hB0tXY7cIhAp_O-nAk3mMD_isaZ9Qo0grefnfYIR59HXwLcZI6rQREcVQMg=w353-h539-no" 
-					alt=""
-					class="d-block img-fluid"
-				>
+			<figure class="w-25 img-thumbnail mx-auto round shadow">
+				<img src="https://lh3.googleusercontent.com/twN6CGQLGe7l8BPa_4-1qkZ7FWL5CRUmQVHLymmNIxqNy8pxqeCeU8HJkLSWPEO7ZGbF8Cs3O5G-0kSaLNFXp555H0qdT4vYcqYflNzL0ZCNzcm35ktQkoKEAxSakQ_IS1-ynQuakqmHtTpYE-4cpPUFXccHmXKnF3K3bw1PQGPxU8nlF-DyxznbuV2G_NqGq8L8l-MPlwA1TUOghEECUAS9Qp3mAWEeqmpQ5J15cHiedQRYlQrS4hR-Z5lebT_Ofj3Ji6-_FWHK-04rpUSu8bB9ekTuzpX3vIRCzEfe37enk4rwbSb-hAEc9ymsmxG5PkGQwY-KJnnsRgRW-y9hLZCKLOxcwob_LGPZOwX_6oTUKnjqOX32xRNjkW5B4HKp8TlFtRdK6lFQJBr4LyHCFquZ6LVu-EsMwNGKnO7Bd4elTOW9ZAZfbfBCoSb9mK8nk0RYrzO3dQ61N_iDiN3JHGl5f902k2EhD5so2PvwqhnQ_MHeR9DGswNTWJI-ZYKzHWq9TqnHvjTQJ1D5cDb-zJmDtqfMKGMjuEeoH09wHX1nRzTGtnOE1DBzIgtL1_Fxj4cE_kbCwLrhSecKJP7qu_8WwaBVTrsf4mazYNGF6PaGds8NrpHoNMJG9eF2o0FP_efA71VMWNdHSiOu-ZwEdXaF2pwh3woUwGkCrZcdlP_4mtAIlEfA9Y8hB0tXY7cIhAp_O-nAk3mMD_isaZ9Qo0grefnfYIR59HXwLcZI6rQREcVQMg=w353-h539-no"
+					alt="" class="d-block img-fluid">
 			</figure>
 			<p class="question-count">This is the question <span id="question-index">3</span></p>
 			<h3 id="question" class="">This is the question for the quiz this can be very big ?</h3>
 			<div id="answers" class="row w-sm-50 m-auto">
 				<div class="col-sm-6 mt-3">
-					<a href="javascript:void(0);" id="answer1" role="button" aria-pressed="true" class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-success">
+					<a href="javascript:void(0);" id="answer1" role="button" aria-pressed="true"
+						class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-success">
 						Answer 1
 					</a>
 				</div>
 				<div class="col-sm-6 mt-3">
-					<a href="javascript:void(0);" id="answer2" role="button" aria-pressed="true" class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-info">
+					<a href="javascript:void(0);" id="answer2" role="button" aria-pressed="true"
+						class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-info">
 						Answer 2
 					</a>
 				</div>
 				<div class="col-sm-6 mt-3">
-					<a href="javascript:void(0);" id="answer3" role="button" aria-pressed="true" class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-primary">
+					<a href="javascript:void(0);" id="answer3" role="button" aria-pressed="true"
+						class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-primary">
 						Answer 3
 					</a>
 				</div>
 				<div class="col-sm-6 mt-3">
-					<a href="javascript:void(0);" id="answer4" role="button" aria-pressed="true" class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-warning">
+					<a href="javascript:void(0);" id="answer4" role="button" aria-pressed="true"
+						class="answer btn btn-link card text-dark rounded p-3 border-top-0 border-warning">
 						Answer 4
 					</a>
 				</div>
@@ -99,7 +113,8 @@
 			<h3>Click Here To start Quiz</h3>
 			<div class="row w-sm-50 m-auto">
 				<div class="col-sm-12 mt-3">
-					<a id="js-start-quiz" href="javascript:void(0);" role="button" aria-pressed="true" class="btn btn-link card text-dark rounded p-3 border-top-0 border-success">
+					<a id="js-start-quiz" href="javascript:void(0);" role="button" aria-pressed="true"
+						class="btn btn-link card text-dark rounded p-3 border-top-0 border-success">
 						Start Quiz
 					</a>
 				</div>
@@ -111,7 +126,7 @@
 			<div class="row w-sm-50 m-auto">
 				<div class="text-center">
 					<div class="spinner-border" role="status">
-					  <span class="sr-only">Loading...</span>
+						<span class="sr-only">Loading...</span>
 					</div>
 				</div>
 			</div>
@@ -122,28 +137,50 @@
 			<h2>🥳💫🤩👌</h2>
 
 			<h2 class="pt-3" id="result"></span></h2>
-			<div class="row w-sm-50 m-auto">
+			<!-- <div class="row w-sm-50 m-auto">
 				<div class="col-sm-12 mt-3">
 					<a href="./result/" id="see-result" role="button" aria-pressed="true" class="btn btn-link card text-dark rounded p-3 border-top-0 border-success">
 						See Detailed Analysis
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<footer class="container-fluid bg-dark mt-5">
 		<h1 class="text-white text-center pt-3">Satsang Quiz</h1>
 		<h6 class="text-white text-center pb-3">Made with ❤️ for amazing people like you</h6>
-	</footer>	
+	</footer>
 
-	<h6 class="text-center pt-1">Developed with bless of Bhagwan Swaminarayan by <a href="https://sahajananddigital.in" target="_blank">Sahajanand Digital</a></h6>
+	<h6 class="text-center pt-1">Developed with bless of Bhagwan Swaminarayan by <a href="https://sahajananddigital.in"
+			target="_blank">Sahajanand Digital</a></h6>
+	<!-- Modal -->
+	<div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="commonModalLabel">Result Submitted</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
- 
+
 <script src="script.js"></script>
 <script>
 	// Put this at the top of index page
-if ( document.cookie.indexOf("CrewCentreSession=Valid")  == -1 ) {
-    location.href = "./signup/";
-}
+	if (document.cookie.indexOf("CrewCentreSession=Valid") == -1) {
+		location.href = "./signup/";
+	}
 </script>
