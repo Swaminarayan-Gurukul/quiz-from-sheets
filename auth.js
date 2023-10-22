@@ -1,5 +1,5 @@
 // Put this at the top of index page
-if ( ! (document.cookie.indexOf("CrewCentreSession=Valid")  == -1) ) {
+if ( ! localStorage.getItem('login')  != 1 ) {
     location.href = "../index.html";
 }
 
@@ -30,10 +30,6 @@ var handleRequest = function(user, type){
                         if(data[type]){
                             quizeStore.setItem('login', '1');
                             data.token.length && quizeStore.setItem('token', data.token);
-                            var sessionTimeout = 1; //hours
-                            var loginDuration = new Date();
-                            loginDuration.setTime(loginDuration.getTime()+(sessionTimeout*60*60*1000));
-                            document.cookie = "CrewCentreSession=Valid; "+loginDuration.toGMTString()+"; path=/";
                         }
                         alert(data.result);
                         return data;
@@ -46,10 +42,6 @@ var handleRequest = function(user, type){
                         if(data.signup){
                             quizeStore.setItem('login', '1');
                             data.token.length && quizeStore.setItem('token', data.token);
-                            var sessionTimeout = 1; //hours
-                            var loginDuration = new Date();
-                            loginDuration.setTime(loginDuration.getTime()+(sessionTimeout*60*60*1000));
-                            document.cookie = "CrewCentreSession=Valid; "+loginDuration.toGMTString()+"; path=/";
                             window.location.href = "../";
                         }
                         return data;
