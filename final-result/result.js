@@ -55,7 +55,7 @@ function displayRunnerUps(result){
         finalHTML = "<tr><td>SR. No</td><td>Name</td><td>Score</td></tr>";
 
         for( let i = 0; i < result.length; i++ ) {
-            finalHTML +=`<tr><td>${i+4}</td><td>${result[i][1]}</td><td>${result[i][2]}</td></tr>`    
+            finalHTML +=`<tr><td>${i}</td><td>${result[i][1]}</td><td>${result[i][2]}</td></tr>`    
         }
     }
     var leaderBoard = document.querySelector('#runner-up-results');
