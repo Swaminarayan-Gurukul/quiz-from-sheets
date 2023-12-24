@@ -7,7 +7,7 @@ var quizeStore = localStorage;
 
 var handleRequest = function(user, type){
     var ajaxRequest = function(user){
-        var scriptURL = "https://script.google.com/macros/s/AKfycbzVsQBrFJ1gOkBwE_9zAp6lQgvXZcTf_glyEabqj-iHA5r1BgL5-vekgCXnW0yN--8/exec";        // user = { data : user };
+        var scriptURL = "https://script.google.com/macros/s/AKfycbz9DAbsfsG1BeFN04TLC-7b_yOfEATdfG9cbBZVMiZbZ32zJuAgIEy2TffW3Xe7qMwt/exec";        // user = { data : user };
         $.ajax({
             type: "POST",
             url: scriptURL,
