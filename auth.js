@@ -1,5 +1,5 @@
 // Put this at the top of index page
-if ( ! localStorage.getItem('login')  != 1 ) {
+if ( ! localStorage.getItem('loggedin')  != 1 ) {
     location.href = "../index.html";
 }
 
@@ -25,10 +25,10 @@ var handleRequest = function(user, type){
             {
                 switch(type){
                     case 'login':
-                        (quizeStore.getItem('login') == 'undefined') ? quizeStore.setItem('login', '0') : '';
+                        (quizeStore.getItem('loggedin') == 'undefined') ? quizeStore.setItem('loggedin', '0') : '';
                         (quizeStore.getItem('token') == 'undefined') ? quizeStore.setItem('token', '') : '';
                         if(data[type]){
-                            quizeStore.setItem('login', '1');
+                            quizeStore.setItem('loggedin', '1');
                             data.token.length && quizeStore.setItem('token', data.token);
                         }
                         alert(data.result);
@@ -36,11 +36,11 @@ var handleRequest = function(user, type){
 
                         break;
                     case 'signup':  
-                        (quizeStore.getItem('login') == 'undefined') ? quizeStore.setItem('login', '0') : '';
+                        (quizeStore.getItem('loggedin') == 'undefined') ? quizeStore.setItem('loggedin', '0') : '';
                         (quizeStore.getItem('token') == 'undefined') ? quizeStore.setItem('token', '') : '';
                         console.log(data[type]);
                         if(data.signup){
-                            quizeStore.setItem('login', '1');
+                            quizeStore.setItem('loggedin', '1');
                             data.token.length && quizeStore.setItem('token', data.token);
                             window.location.href = "../";
                         }
@@ -65,15 +65,15 @@ $(document).ready(function(){
      * @param {Type for the request} type reqired
      */
     
-    $('.login-form').submit(function(e){
+    $('.loggedin-form').submit(function(e){
         e.preventDefault();
         let user = {
-            name: 'login',
-            name: $('.login-form #email').val(),
-            phone: $('.login-form #password').val(),
-            action: 'login',
+            name: 'loggedin',
+            name: $('.loggedin-form #email').val(),
+            phone: $('.loggedin-form #password').val(),
+            action: 'loggedin',
         } 
-        handleRequest(user, 'login');
+        handleRequest(user, 'loggedin');
     });
 
     $('.signup-form').submit(function(e){
@@ -81,6 +81,8 @@ $(document).ready(function(){
         let user = {
             name: $('.signup-form #name').val(),
             phone: $('.signup-form #phone').val(),
+            birthday: $('.signup-form #birthday').val(),
+            anniversary: $('.signup-form #anniversary').val(),
             action: "signup",
         } 
         console.log(user);
@@ -111,6 +113,6 @@ function onSignIn(googleUser) {
     } 
     console.log(user);
 
-    handleRequest(user, 'login');
+    handleRequest(user, 'loggedin');
 
 }
