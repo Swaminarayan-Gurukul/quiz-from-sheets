@@ -1,4 +1,4 @@
-var scriptURL = "https://script.google.com/macros/s/AKfycbz9DAbsfsG1BeFN04TLC-7b_yOfEATdfG9cbBZVMiZbZ32zJuAgIEy2TffW3Xe7qMwt/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbwtV-fuU_7irTnkKNAVlLsq0d9vxQhcqEIn1LlyFQgLdIdnzFNEfpV7zRK4EELyDbgI/exec";
 
 const resultAnalysis = document.getElementById('result-analysis')
 const retakeQuizContainer = document.getElementById('retake-quiz-container')
