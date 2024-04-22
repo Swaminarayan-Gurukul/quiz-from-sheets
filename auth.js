@@ -81,8 +81,6 @@ $(document).ready(function(){
         let user = {
             name: $('.signup-form #name').val(),
             phone: $('.signup-form #phone').val(),
-            birthday: $('.signup-form #birthday').val(),
-            anniversary: $('.signup-form #anniversary').val(),
             action: "signup",
         } 
         console.log(user);

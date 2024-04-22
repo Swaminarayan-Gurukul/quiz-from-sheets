@@ -97,6 +97,13 @@
 			<h3>Click Here To start Quiz</h3>
 			<div class="row w-sm-50 m-auto">
 				<div class="col-sm-12 mt-3">
+					<form action="">
+						<div class="form-group mb-3">
+							<label for="email">Code / આજ નો કોડ </label>
+							<input type="number" pattern="[0-9]+" class="form-control" id="passcode" aria-describedby="emailHelp" placeholder="Enter Code" required>
+							<small id="emailHelp" class="form-text text-muted"> Add code for start quiz.</small>
+						</div>
+					</form>
 					<a id="js-start-quiz" href="javascript:void(0);" role="button" aria-pressed="true"
 						class="btn btn-link card text-dark rounded p-3 border-top-0 border-success">
 						Start Quiz

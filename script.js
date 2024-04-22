@@ -22,10 +22,15 @@ answersElement = Array.from(document.querySelectorAll('#answers a')).map(functio
 startBtn.addEventListener('click',startQuiz);
 
 function startQuiz(){
-    startContainer.classList.toggle('d-none');
-    loadingContainer.classList.toggle('d-none');
-    quizeStore.setItem('selectedAnswers',JSON.stringify([]));
-    fetchQuizQuestions();
+    var code = document.getElementById('passcode').value;
+    if( !validateCode( code ) ) {
+        alert( 'સાચો કોડ એન્ટર કરો / Please enter Valid Code' )
+    } else {
+        startContainer.classList.toggle('d-none');
+        loadingContainer.classList.toggle('d-none');
+        quizeStore.setItem('selectedAnswers',JSON.stringify([]));
+        fetchQuizQuestions();
+    }
 }
 
 function fetchQuizQuestions(){
@@ -167,4 +172,15 @@ function sendResultToGoogleSheet(formData) {
         });
     } 
     ajaxRequest(formData);
-  }
+}
+
+function validateCode( enteredCode ) {
+    var date = new Date();
+    var code = date.getFullYear() + (date.getMonth() + 1) + date.getDate();
+
+    if( enteredCode == code ) {
+        return true;
+    }
+
+    return false;
+}
