@@ -65,9 +65,10 @@
       <tr class="table-danger"><td>...</td><td>...</td><td>...</td><td>...</td></tr> -->
 
     </table>
+
     <div class="tex-center d-flex justify-content-center">
       <div class="d-flex">
-      <a id="js-start-quiz" href="../" role="button" aria-pressed="true" class="btn btn-link card text-dark rounded p-3 border-top-0 border-success">
+      <a id="js-start-quiz" onclick="resetQuizQuestion()" href="../" role="button" aria-pressed="true" class="btn btn-link card text-dark rounded p-3 border-top-0 border-success">
         Retake Quiz ?
       </a>
     </div>
@@ -109,8 +110,8 @@
 
 <script>
   // Put this at the top of index page
-if ( localStorage.getItem("login")  != "1" ) {
-    location.href = "../login/index.html";
+if ( localStorage.getItem("loggedin001")  != "1" ) {
+    location.href = "../signup";
 }
 </script>
 <script src="result.js"></script>

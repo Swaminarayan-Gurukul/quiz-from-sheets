@@ -1,4 +1,4 @@
-var scriptURL = "https://script.google.com/macros/s/AKfycbwtV-fuU_7irTnkKNAVlLsq0d9vxQhcqEIn1LlyFQgLdIdnzFNEfpV7zRK4EELyDbgI/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbznmIT9u4xUDLTe08GXBoHtlEgDQ9-dvfU-GzILrQbgA4QCZTlmk_PemCughi_5ZLbi/exec";
 
 const resultAnalysis = document.getElementById('result-analysis')
 const retakeQuizContainer = document.getElementById('retake-quiz-container')
@@ -10,6 +10,10 @@ fetchResults();
 function displayAllResults(results){
     resultsJson = JSON.parse(results);
     // Sort the array by the second element
+    //Time wise Sort
+    resultsJson.sort((a,b) => a[3] - b[3] );
+
+    //result wise sort
     resultsJson.sort((a, b) => b[2] - a[2]);
 
     leaderResults = resultsJson.slice(0,3);
@@ -31,7 +35,7 @@ function displayLeaderBoard(result){
 
         for( let i = 0; i < result.length; i++ ) {
             finalHTML +=`<div class="card">
-            <img src="https://www.svgrepo.com/show/304743/trophy-first.svg" class="card-img-top" alt="...">
+            <img src="../images/${i+1}.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h3 class="card-title">${result[i][1]}</h3>
                 <h4 class="card-title">${result[i][2]}</h4>
@@ -55,7 +59,7 @@ function displayRunnerUps(result){
         finalHTML = "<tr><td>SR. No</td><td>Name</td><td>Score</td></tr>";
 
         for( let i = 0; i < result.length; i++ ) {
-            finalHTML +=`<tr><td>${i}</td><td>${result[i][1]}</td><td>${result[i][2]}</td></tr>`    
+            finalHTML +=`<tr><td>${i + 1}</td><td>${result[i][1]}</td><td>${result[i][2]}</td></tr>`    
         }
     }
     var leaderBoard = document.querySelector('#runner-up-results');

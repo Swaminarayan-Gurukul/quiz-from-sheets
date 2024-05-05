@@ -1,4 +1,4 @@
-var scriptURL = "https://script.google.com/macros/s/AKfycbwtV-fuU_7irTnkKNAVlLsq0d9vxQhcqEIn1LlyFQgLdIdnzFNEfpV7zRK4EELyDbgI/exec";
+var scriptURL = "https://script.google.com/macros/s/AKfycbznmIT9u4xUDLTe08GXBoHtlEgDQ9-dvfU-GzILrQbgA4QCZTlmk_PemCughi_5ZLbi/exec";
 /**
  * Initializations
  */
@@ -45,7 +45,19 @@ function fetchQuizQuestions(){
         method: "GET",
         dataType: "text",
         success : function( data ){
-            showQuestion(JSON.parse(data))
+            function shuffle(array) {
+                for (var i = array.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+                return array;
+            }
+            var questionsData = JSON.parse(data);
+            var questionsDataJSON = JSON.parse(questionsData);
+            questionsDataJSON = shuffle(questionsDataJSON);
+            showQuestion( JSON.stringify(questionsDataJSON) );
         },
         error: function( xhr,e ){
             console.log(e);

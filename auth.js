@@ -7,7 +7,7 @@ var quizeStore = localStorage;
 
 var handleRequest = function(user, type){
     var ajaxRequest = function(user){
-        var scriptURL = "https://script.google.com/macros/s/AKfycbwtV-fuU_7irTnkKNAVlLsq0d9vxQhcqEIn1LlyFQgLdIdnzFNEfpV7zRK4EELyDbgI/exec";        // user = { data : user };
+        var scriptURL = "https://script.google.com/macros/s/AKfycbznmIT9u4xUDLTe08GXBoHtlEgDQ9-dvfU-GzILrQbgA4QCZTlmk_PemCughi_5ZLbi/exec";        // user = { data : user };
         $.ajax({
             type: "POST",
             url: scriptURL,
@@ -31,7 +31,6 @@ var handleRequest = function(user, type){
                             quizeStore.setItem('loggedin001', '1');
                             data.token.length && quizeStore.setItem('token', data.token);
                         }
-                        alert(data.result);
                         return data;
 
                         break;
@@ -48,6 +47,7 @@ var handleRequest = function(user, type){
         
                         break;
                     default:
+                        alert("default");
                         console.log('Case default');    
                 }
                 console.log(data);
